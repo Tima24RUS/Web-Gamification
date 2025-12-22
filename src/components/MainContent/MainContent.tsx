@@ -2,7 +2,7 @@ import './MainContent.css';
 
 const MainContent = () => {
   return (
-    <main className="main-content">
+    <main className="main-contents">
       <div className="content-wrapper">
         <div className="text-block">
           <h1>Курс по геймификации</h1>

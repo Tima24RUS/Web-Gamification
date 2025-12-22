@@ -1,6 +1,7 @@
 .alchemic-page {
+  margin-top: 100px;
   width: 100vw;
-  min-height: 98vh; 
+  min-height: 88vh; 
   padding: 2rem 3rem; 
   color: white;
   box-sizing: border-box;
@@ -29,6 +30,7 @@
 
 
 .lab-task {
+  margin-top: 250px;
   flex: 2;
   position: relative;
   max-width: 1000px;
@@ -37,18 +39,19 @@
 }
 
 .scroll-image {
+  
   width: 100%;
   max-width: 950px;
-  height: 750px;
+  height: 650px;
   display: block;
   border-radius: 10px;
 }
 
 .scroll-text {
   position: absolute;
-  top: 18%;      
-  left: 15%;
-  right: 15%;
+  top: 10%;      
+  left: 10%;
+  right: 55%;
   bottom: 18%;
   overflow-y: auto;
   scrollbar-width: none;
@@ -121,6 +124,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  
 }
 
 .scroll-cards {
@@ -135,7 +139,7 @@
   border-radius: 4px;
 }
 
-.arrow {
+.arrow1 {
   width: 30px;
   height: 30px;
   cursor: pointer;

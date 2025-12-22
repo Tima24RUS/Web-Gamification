@@ -48,16 +48,23 @@ const LibraryPage = () => {
 
   const [selectedLecture, setSelectedLecture] = useState<null | typeof lectures[0]>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isTestOpen, setIsTestOpen] = useState(false);
 
   const handleLectureClick = (lecture: typeof lectures[0]) => {
     if (!lecture.unlocked) return;
     setSelectedLecture(lecture);
     setIsPlaying(false);
+    setIsTestOpen(false);
   };
 
   const handleBack = () => {
     setSelectedLecture(null);
     setIsPlaying(false);
+    setIsTestOpen(false);
+  };
+
+  const handleOpenTest = () => {
+    setIsTestOpen(true);
   };
 
   return (
@@ -91,22 +98,43 @@ const LibraryPage = () => {
       ) : (
         <div className="lecture-player">
           <h2>Лекция {selectedLecture.id}. {selectedLecture.title}</h2>
-          <div className="video-wrapper">
-            {!isPlaying ? (
-              <img
-                src="/images/custom-play.png" 
-                alt="Play"
-                className="custom-play-button"
-                onClick={() => setIsPlaying(true)}
+
+          {!isTestOpen && (
+            <div className="video-wrapper">
+              {!isPlaying ? (
+                <img
+                  src="/images/custom-play.png" 
+                  alt="Play"
+                  className="custom-play-button"
+                  onClick={() => setIsPlaying(true)}
+                />
+              ) : (
+                <video controls autoPlay>
+                  <source src={selectedLecture.video} type="video/mp4" />
+                  Ваш браузер не поддерживает видео.
+                </video>
+              )}
+            </div>
+          )}
+
+          {isTestOpen ? (
+            <div className="unity-iframe-wrapper">
+              <iframe
+                src={`/unity-tests/index.html`}
+                title={`Тест лекции ${selectedLecture.id}`}
+                allowFullScreen
               />
-            ) : (
-              <video controls autoPlay>
-                <source src={selectedLecture.video} type="video/mp4" />
-                Ваш браузер не поддерживает видео.
-              </video>
-            )}
-          </div>
-          <button className="back-button" onClick={handleBack}>← Назад к лекциям</button>
+              <button className="back-button" onClick={() => setIsTestOpen(false)}>
+                ← Закрыть тест
+              </button>
+            </div>
+
+          ) : (
+            <div className="lecture-buttons">
+              <button className="back-button" onClick={handleBack}>← Назад к лекциям</button>
+              <button className="test-button" onClick={handleOpenTest}>Пройти тест</button>
+            </div>
+          )}
         </div>
       )}
     </div>

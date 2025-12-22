@@ -9,24 +9,17 @@ const AlchemicTablePage = () => {
       <div className="alchemic-content">
         
         <div className="lab-task">
-          <img src="/images/svitok.png" alt="Свиток" className="scroll-image" />
+          <img src="/images/book-open.png" alt="Свиток" className="scroll-image" />
           <div className="scroll-text">
             <h2>Задание на лабораторную работу №1</h2>
-            <p>Задание ол ол олиол иолилоии тдовидрф фди фои ф дгфидфи дифдги дфи дф ф дфии фд ифди фи дф ф фи фд дфои оф ф олфи</p>
+            <p>Задание ол ол олиол иолилоии тдовидрф фди фои ф 
+              дгфидфи дифдги дфи дф ф дфии фд ифди фи дф ф фи фд дфои оф ф олфи</p>
             <p>Задание</p>
             <p>Задание</p>
             <p>Задание</p>
             <p>Задание</p>
             <p>Задание</p>
-            <p>Задание</p>
-            <p>Задание</p>
-            <p>Задание</p>
-            <p>Задание</p>
-            <p>Задание</p>
-            <p>Задание</p>
-            <p>Задание</p>
-            <p>Задание</p>
-            
+            <p>Задание</p>           
           </div>
         </div>
 
@@ -39,13 +32,13 @@ const AlchemicTablePage = () => {
 
           {/* Навигация по свиткам */}
           <div className="scroll-selector">
-            <img src="/images/arrow-down.png" className="arrow rotate-left" alt="Назад" />
+            <img src="/images/arrow-down.png" className="arrow1 rotate-left" alt="Назад" />
             <div className="scroll-cards">
               {[1, 2, 3, 4, 5].map((_, i) => (
                 <div key={i} className="scroll-card" />
               ))}
             </div>
-            <img src="/images/arrow-down.png" className="arrow rotate-right" alt="Вперёд" />
+            <img src="/images/arrow-down.png" className="arrow1 rotate-right" alt="Вперёд" />
           </div>
 
           

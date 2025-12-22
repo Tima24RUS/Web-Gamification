@@ -1,0 +1,128 @@
+.admin-page {
+  margin-top: 100px;
+  width: 97.9vw;
+  min-height: 9vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo-btn,
+.add-student-btn,
+.profile-btn,
+.group-select {
+  background: linear-gradient(to bottom, #666, #444);
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.group-select {
+  padding: 6px 10px;
+  color: white;
+}
+
+/* --- Контент --- */
+.admin-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-right: 0vw;
+}
+
+.filters p {
+    font-size: 20px;
+}
+
+.filter-btn {
+    margin-top: 15px;
+  background: linear-gradient(to bottom, #666, #444);
+  border: none;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 40px;
+}
+
+/* --- Полупрозрачный блок --- */
+.group-box {
+  background: rgba(80, 80, 80, 0.6);
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  width: 130%;
+  min-height: 600px;
+}
+
+.group-box h2 {
+  margin-top: 20%;
+  font-size: 22px;
+  color: white;
+}
+
+.group-box p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.students-table th,
+.students-table td {
+  padding: 8px 12px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.students-table th {
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 20px;
+  width: 80px;
+  margin: 0 auto;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #00c853, #64dd17);
+  height: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: black;
+  font-weight: bold;
+}
+

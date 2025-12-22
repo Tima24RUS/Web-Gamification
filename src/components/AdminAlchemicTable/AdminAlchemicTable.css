@@ -1,0 +1,249 @@
+/* Общий фон и стиль */
+.admin-alchemic-table {
+  font-family: 'Courier New', monospace;
+  color: #fff;
+  background: url('/images/background-dark.png') repeat;
+  width: 100vw;
+  height: 100vh; /* Полная высота окна */
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden; /* Убираем переполнение */
+}
+
+/* Верхняя строка управления */
+.top-bar {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  padding: 0px;
+  font-size: 15px;
+  color: white;
+}
+
+.top-bar .back-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* .top-bar .page-title {
+  font-size: 1.6rem;
+  color: #8a8053;
+  text-shadow: 1px 1px 2px #000;
+  font-weight: bold;
+  margin: 0;
+} */
+
+.top-bar .student-name {
+  color: #fff;
+  font-size: 15px;
+  
+}
+
+/* Полоса с книгами */
+.book-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #ddd;
+}
+
+.book-item img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Главный контент — теперь два блока: левый и правый */
+.main-content {
+  width: 1700px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+  align-items: flex-start;
+  height: calc(100vh - 200px); /* Оставляем место под заголовком и полосой книг */
+}
+
+/* Книга — ограничена по ширине */
+.book-container {
+  position: relative;
+  margin-left: 50px;
+  width: 900px;
+  height: 600px;
+  background: url('/images/book-bg.png') no-repeat center;
+  background-size: contain;
+  border: 2px solid #8b4513;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.book-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lab-title {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #d35400, #b22200);
+  color: white;
+  padding: 8px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #8b4513;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.book-tasks {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.5;
+  width: 800px;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+}
+
+/* Правая панель — теперь в рамках контейнера */
+.right-panel {
+  flex: 0 0 300px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 43px;
+  border-radius: 10px;
+  border: 1px solid #444;
+}
+
+/* Дедлайн */
+.deadline {
+  background: rgba(0,0,0,0.6);
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+}
+.deadline-label {
+  margin: 0;
+  color: #fdd835;
+}
+.deadline-now {
+  color: #6f6;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Свитки */
+.scrolls {
+  margin-bottom: 20px;
+}
+.scrolls h4 {
+  color: #fdd835;
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+.scrolls-list {
+  display: flex;
+  gap: 8px;
+}
+.scrolls-list img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Форма проверки */
+.lab-check label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #eee;
+}
+
+.lab-check input[type="text"],
+.lab-check input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-family: 'Courier New', monospace;
+}
+
+.grade-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.grade-section span {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.status-section {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.status-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.status-btn.accepted {
+  background: linear-gradient(to bottom, #CBE3BF6E, #98AF80BD);
+  color: white;
+}
+.status-btn.revision {
+  background: linear-gradient(to bottom, #A96D42, #A96D4200);
+  color: white;
+}
+
+.send-btn {
+  width: 100%;
+  background: linear-gradient(to bottom, #F09C1B, #C36016C7);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  transition: all 0.2s;
+}
+.send-btn:hover {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
