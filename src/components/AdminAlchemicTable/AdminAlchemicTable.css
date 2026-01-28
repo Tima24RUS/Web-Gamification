@@ -4,11 +4,11 @@
   color: #fff;
   background: url('/images/background-dark.png') repeat;
   width: 100vw;
-  height: 100vh; /* Полная высота окна */
+  height: 100vh; 
   padding: 2rem;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden; /* Убираем переполнение */
+  overflow: hidden; 
 }
 
 /* Верхняя строка управления */
@@ -33,14 +33,6 @@
   padding: 4px 8px;
   border-radius: 4px;
 }
-
-/* .top-bar .page-title {
-  font-size: 1.6rem;
-  color: #8a8053;
-  text-shadow: 1px 1px 2px #000;
-  font-weight: bold;
-  margin: 0;
-} */
 
 .top-bar .student-name {
   color: #fff;
@@ -74,7 +66,7 @@
   height: 50px;
 }
 
-/* Главный контент — теперь два блока: левый и правый */
+/* Главный контент*/
 .main-content {
   width: 1700px;
   display: flex;
@@ -82,10 +74,10 @@
   gap: 30px;
   margin-top: 20px;
   align-items: flex-start;
-  height: calc(100vh - 200px); /* Оставляем место под заголовком и полосой книг */
+  height: calc(100vh - 200px); 
 }
 
-/* Книга — ограничена по ширине */
+/* Книга  */
 .book-container {
   position: relative;
   margin-left: 50px;
@@ -132,7 +124,7 @@
   border-radius: 6px;
 }
 
-/* Правая панель — теперь в рамках контейнера */
+/* Правая панель */
 .right-panel {
   flex: 0 0 300px;
   background: rgba(0, 0, 0, 0.7);

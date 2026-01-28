@@ -5,7 +5,7 @@ interface AddStudentModalProps {
   onClose: () => void;
   onAdd: (count: number, bindToCurrent: boolean, groupName?: string) => void;
   currentGroup?: string | null;
-  groups?: string[]; // список всех групп для валидации
+  groups?: string[]; 
 }
 
 const AddStudentModal = ({ onClose, onAdd, currentGroup, groups = [] }: AddStudentModalProps) => {
@@ -14,7 +14,7 @@ const AddStudentModal = ({ onClose, onAdd, currentGroup, groups = [] }: AddStude
   const [groupName, setGroupName] = useState<string>(currentGroup || '');
 
   useEffect(() => {
-    // при открытии модалки всегда подставляем текущую группу
+    
     setGroupName(currentGroup || '');
     setBindToCurrent(true);
     setCount(1);
@@ -28,7 +28,7 @@ const AddStudentModal = ({ onClose, onAdd, currentGroup, groups = [] }: AddStude
       return;
     }
 
-    // если пользователь снимает привязку к текущей группе, проверяем корректность группы
+    
     if (!bindToCurrent && !groups.includes(groupName)) {
       alert('Введите корректное название группы');
       return;

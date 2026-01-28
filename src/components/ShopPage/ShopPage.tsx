@@ -5,7 +5,7 @@ const ShopPage = () => {
   const [selectedInventoryItem, setSelectedInventoryItem] = useState<number | null>(null);
   const [selectedShopItem, setSelectedShopItem] = useState<number | null>(null);
 
-  const items = Array(8).fill({ count: 2, icon: '/images/scroll-icon.png' }); // иконка предмета
+  const items = Array(8).fill({ count: 2, icon: '/images/scroll-icon.png' }); 
 
   return (
     <div className="shop-page">

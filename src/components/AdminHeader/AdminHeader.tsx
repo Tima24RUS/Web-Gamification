@@ -24,7 +24,7 @@ const AdminHeader = ({ groups = [], onGroupSelect, onAddStudent, onCreateGroup }
   const handleCreateGroup = () => {
     const trimmedName = newGroupName.trim();
     if (trimmedName && onCreateGroup) {
-      onCreateGroup(trimmedName); // передаём только название
+      onCreateGroup(trimmedName); 
       setNewGroupName('');
       setShowCreateForm(false);
     }
